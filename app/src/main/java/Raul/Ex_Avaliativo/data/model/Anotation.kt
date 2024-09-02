@@ -24,7 +24,7 @@ class Anotation(
     @ColumnInfo(name = "anotation")
     var anotation: String = "",
 
-    @ColumnInfo(name = "anotation")
+    @ColumnInfo(name = "local")
     var local: String = "",
 
     deadLineDate: LocalDate = LocalDate.now()
