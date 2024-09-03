@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(), AnotationItemClickListener {
     }
     override fun clickDone(position: Int) {
         val anotation = adapter.getDatasetItem(position)
-        viewModel.makeTaskDone(anotation.id)
+        viewModel.makeAnotationDone(anotation.id)
     }
     override fun clickOpen(position: Int) {
         val anotation = adapter.getDatasetItem(position)
@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity(), AnotationItemClickListener {
         binding.recyclerview.adapter = adapter
     }
     private fun setupObservers() {
-        viewModel.anotations.observe(this, Observer {
+        viewModel.anotation.observe(this, Observer {
             adapter.submitDataset(it)
         })
     }

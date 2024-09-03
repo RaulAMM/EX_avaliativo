@@ -20,7 +20,7 @@ class MainViewModel(private val repository: AnotationRepository) : ViewModel() {
             _anotation.postValue(list)
         }
     }
-    fun makeTaskDone(id: Long) {
+    fun makeAnotationDone(id: Long) {
         viewModelScope.launch {
             val anotation = repository.findById(id)
             if(anotation != null){

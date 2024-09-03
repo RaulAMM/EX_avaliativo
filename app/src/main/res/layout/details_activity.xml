@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="Tarefa"
+        android:text="Titulo"
         android:textColor="@color/black"
         android:textSize="12sp"
         android:textStyle="bold"
@@ -25,46 +25,67 @@
         android:id="@+id/edit_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Informe a Tarefa"
+        android:hint="Informe Titulo"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="@id/text_label_title"
         app:layout_constraintTop_toBottomOf="@id/text_label_title" />
 
     <TextView
-        android:id="@+id/text_label_description"
+        android:id="@+id/text_label_anotation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Detalhes"
+        android:layout_marginTop="64dp"
+        android:text="Anotação"
         android:textColor="@color/black"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/edit_title" />
+        app:layout_constraintStart_toStartOf="@id/edit_title"
+        app:layout_constraintTop_toTopOf="@id/edit_title" />
 
     <EditText
-        android:id="@+id/edit_description"
+        android:id="@+id/edit_anotation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Informe a Anotação"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@id/text_label_anotation"
+        app:layout_constraintTop_toBottomOf="@id/text_label_anotation" />
+
+    <TextView
+        android:id="@+id/text_label_local"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="local"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/edit_anotation" />
+
+    <EditText
+        android:id="@+id/edit_local"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="top"
-        android:hint="Detalhes sobre a tarefa"
+        android:hint="Local"
         android:inputType="textMultiLine"
         android:lines="4"
         android:minLines="4"
         android:scrollHorizontally="false"
         app:layout_constraintStart_toStartOf="@id/text_label_title"
-        app:layout_constraintTop_toBottomOf="@id/text_label_description" />
+        app:layout_constraintTop_toBottomOf="@id/text_label_local" />
 
     <TextView
         android:id="@+id/text_label_deadline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Data de Vencimento"
+        android:text="Data"
         android:textColor="@color/black"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_description" />
+        app:layout_constraintTop_toBottomOf="@id/edit_local" />
 
     <Button
         android:id="@+id/button_deadline"
